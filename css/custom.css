@@ -9,3 +9,21 @@
     width: 100%;
     height: auto;
 }
+
+/* About section text alignment - justified */
+.about-right {
+    text-align: justify;
+}
+
+.about-right p {
+    text-align: justify;
+    margin-bottom: 0.8em;
+    text-indent: 1.5em;
+}
+
+/* Handwritten font for "Cine sunt eu?" title */
+.section-header-about h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 7.5em;
+}
