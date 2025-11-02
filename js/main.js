@@ -10,13 +10,24 @@ $('#mobile-menu').meanmenu({
 
 // Menu Nav
 function smoothSctollTop() {
-	$('.main-menu ul > li > a[href^="#"],.mean-nav ul > li > a[href^="#"]').on('click', function (event) {
+	$('.main-menu ul > li > a[href^="#"],.mean-nav ul > li > a[href^="#"], a.btn[href^="#"]').on('click', function (event) {
 		var target = $(this.getAttribute('href'));
 		if (target.length) {
 			event.preventDefault();
+			var targetLink = this;
 			$('html, body').stop().animate({
 				scrollTop: target.offset().top - 100
-			}, 1000);
+			}, 1000, function() {
+				// Update active menu after scroll completes
+				$('.hobi-nav li a').removeClass("active");
+				if ($(targetLink).hasClass('btn')) {
+					// If clicked from Learn More button, activate Contact link
+					$('.hobi-nav li a[href="#contact"]').addClass("active");
+				} else {
+					// Otherwise activate the clicked menu item
+					$(targetLink).addClass("active");
+				}
+			});
 		}
 	});
 }
@@ -34,7 +45,24 @@ $('.main-menu ul li > a').on('click',function () {
 	$(this).addClass("active");
 });
 
-// scroll
+// Activate menu item based on scroll position
+function updateActiveMenuOnScroll() {
+	var scrollPos = $(window).scrollTop() + 150; // offset for better accuracy
+	
+	$('.hobi-nav li a[href^="#"]').each(function() {
+		var currLink = $(this);
+		var refElement = $(currLink.attr("href"));
+		
+		if (refElement.length) {
+			if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+				$('.hobi-nav li a').removeClass("active");
+				currLink.addClass("active");
+			}
+		}
+	});
+}
+
+// scroll - combined handler for header sticky and active menu
 $(window).on('scroll', function () {
 	var scroll = $(window).scrollTop();
 	if (scroll < 50) {
@@ -42,6 +70,7 @@ $(window).on('scroll', function () {
 	} else {
 		$("#header-sticky").addClass("header-sticky");
 	}
+	updateActiveMenuOnScroll();
 });
 
 // mainSlider

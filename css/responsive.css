@@ -15,11 +15,13 @@
 .header-area {
 	padding: 0 15px;
 }
+/* .slider-thumb::before - Disabled red animated circle
 .slider-thumb::before {
 	left: -43px;
 	width: 670px;
 	height: 623px;
 }
+*/
 .slider-thumb {
 	width: 615px;
 }
