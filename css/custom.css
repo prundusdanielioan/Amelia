@@ -1,0 +1,11 @@
+/* Logo at half size */
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.standard-logo img,
+.retina-logo img {
+    width: 100%;
+    height: auto;
+}
