@@ -19,10 +19,10 @@ function smoothSctollTop() {
 				scrollTop: target.offset().top - 100
 			}, 1000, function() {
 				// Update active menu after scroll completes
-				$('.hobi-nav li a').removeClass("active");
+				$('.main-nav li a').removeClass("active");
 				if ($(targetLink).hasClass('btn')) {
 					// If clicked from Learn More button, activate Contact link
-					$('.hobi-nav li a[href="#contact"]').addClass("active");
+					$('.main-nav li a[href="#contact"]').addClass("active");
 				} else {
 					// Otherwise activate the clicked menu item
 					$(targetLink).addClass("active");
@@ -37,11 +37,11 @@ smoothSctollTop();
 $('.main-menu div > ul > li:first-child > a').addClass('active');
 
 // menu-last class
-$('.main-menu nav ul.hobi-nav > li').slice(-5).addClass('menu-last');
+$('.main-menu nav ul.main-nav > li').slice(-5).addClass('menu-last');
 
 //for menu active class
 $('.main-menu ul li > a').on('click',function () {
-	$('.hobi-nav li a').removeClass("active");
+	$('.main-nav li a').removeClass("active");
 	$(this).addClass("active");
 });
 
@@ -49,13 +49,13 @@ $('.main-menu ul li > a').on('click',function () {
 function updateActiveMenuOnScroll() {
 	var scrollPos = $(window).scrollTop() + 150; // offset for better accuracy
 	
-	$('.hobi-nav li a[href^="#"]').each(function() {
+	$('.main-nav li a[href^="#"]').each(function() {
 		var currLink = $(this);
 		var refElement = $(currLink.attr("href"));
 		
 		if (refElement.length) {
 			if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-				$('.hobi-nav li a').removeClass("active");
+				$('.main-nav li a').removeClass("active");
 				currLink.addClass("active");
 			}
 		}
