@@ -27,3 +27,45 @@
     font-weight: 600;
     font-size: 7.5em;
 }
+
+/* Navigation menu active/hover underline indicator color */
+.main-menu ul > li > a::before,
+.hobi-nav li > a::before,
+.nav-link::before {
+    background: #3481ad;
+}
+
+/* Timeline vertical line & dots color */
+.education-qualification-body:before {
+    background: rgba(52, 129, 173, 0.2);
+}
+.education-content:before {
+    background-color: #3481ad;
+    box-shadow: 0px 4px 8px 0px rgba(52, 129, 173, 0.4);
+}
+.icon-images i {
+    background-color: #3481ad;
+    box-shadow: 0px 8px 16px 0px rgba(52, 129, 173, 0.3);
+}
+
+/* WhatsApp button with #3481ad theme color */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #3481ad;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(52, 129, 173, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(52, 129, 173, 0.5);
+    color: #fff !important;
+}
