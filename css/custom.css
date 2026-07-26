@@ -32,6 +32,50 @@
     }
 }
 
+/* Responsive typography for Hero / Slider title & text */
+.slider-content h2 {
+    font-size: clamp(32px, 4.5vw, 62px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.slider-content > span {
+    font-size: clamp(16px, 1.8vw, 20px);
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.slider-content p {
+    font-size: clamp(15px, 1.6vw, 18px);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1400px) {
+    .slider-content h2 {
+        font-size: clamp(32px, 4vw, 52px);
+    }
+}
+
+@media (max-width: 991px) {
+    .slider-content h2 {
+        font-size: clamp(28px, 4.5vw, 42px);
+    }
+    .slider-content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .slider-content h2 {
+        font-size: 26px;
+    }
+}
+
+
 /* About section text alignment - justified */
 .about-right {
     text-align: justify;
