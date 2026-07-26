@@ -247,23 +247,19 @@
 }
 
 /* Container breathing room and horizontal spacing */
-.wpb-content-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1400px) {
     .container {
-        padding-left: 35px;
-        padding-right: 35px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1320px;
-        padding-left: 45px;
-        padding-right: 45px;
+        max-width: 1280px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
