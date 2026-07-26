@@ -106,3 +106,26 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     background: #ffffff;
 }
+
+/* Social icons in top header navigation before Home */
+.main-nav .social-nav-item {
+    display: inline-block;
+    margin-right: 25px; /* generous spacing between icons */
+}
+
+.main-nav .social-nav-item:last-of-type {
+    margin-right: 35px; /* generous spacing before Home link */
+}
+
+.main-nav .social-nav-link {
+    font-size: 18px;
+    color: #3481ad !important;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.main-nav .social-nav-link:hover {
+    color: #205c80 !important;
+    transform: translateY(-2px);
+}
