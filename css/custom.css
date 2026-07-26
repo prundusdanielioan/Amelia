@@ -1,13 +1,35 @@
-/* Logo at half size */
-.logo img {
-    width: 100%;
-    height: auto;
+/* Responsive Logo styling */
+.logo {
+    display: inline-block;
+    vertical-align: middle;
 }
 
+.logo img,
 .standard-logo img,
 .retina-logo img {
-    width: 100%;
+    max-width: 100%;
+    width: auto;
     height: auto;
+    max-height: 70px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Tablet & Mobile responsive scaling */
+@media (max-width: 991px) {
+    .logo img,
+    .standard-logo img,
+    .retina-logo img {
+        max-height: 55px;
+    }
+}
+
+@media (max-width: 575px) {
+    .logo img,
+    .standard-logo img,
+    .retina-logo img {
+        max-height: 45px;
+    }
 }
 
 /* About section text alignment - justified */
