@@ -113,6 +113,12 @@
     font-size: 7.5em;
 }
 
+/* All section titles in #3481ad theme color */
+.section-header h2,
+.section-header-about h2 {
+    color: #3481ad !important;
+}
+
 /* Navigation menu active/hover underline indicator color */
 .main-menu ul > li > a::before,
 .hobi-nav li > a::before,
