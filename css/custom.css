@@ -155,6 +155,21 @@
     color: #fff !important;
 }
 
+/* Position slider WhatsApp button aligned right and fully responsive */
+.slider-content .slider-btn {
+    margin-top: 35px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 575px) {
+    .slider-content .slider-btn {
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+
 /* Service cards styling */
 .services-body {
     background: #fff;
