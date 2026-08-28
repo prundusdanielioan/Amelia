@@ -355,5 +355,38 @@
     }
 }
 
+/* Tarife - Prețuri sub fiecare categorie */
+.progess-wrapper {
+    padding-top: 18px;
+}
+
+.progess-wrapper .bar-title h4 {
+    margin-bottom: 6px;
+}
+
+.tarife-price {
+    font-family: 'Rubik', sans-serif;
+    color: #3481ad;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.tarife-price span {
+    font-size: 13.5px;
+    margin-top: 2px;
+}
+
+.tarife-note {
+    font-family: 'Rubik', sans-serif;
+    font-size: 12.5px;
+    font-style: italic;
+    color: #7b85a2;
+    line-height: 1.4;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+
 
 
