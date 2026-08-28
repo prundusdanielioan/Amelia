@@ -383,18 +383,16 @@
     }
 }
 
-/* Tarife - Prețuri sub fiecare categorie */
-.progess-wrapper {
-    padding-top: 18px;
-}
-
+/* Tarife - Prețuri sub fiecare categorie și egalizare înălțime cu poza */
 .progess-wrapper .bar-title h4 {
+    color: #3481ad;
+    font-weight: 500;
     margin-bottom: 6px;
 }
 
 .tarife-price {
     font-family: 'Rubik', sans-serif;
-    color: #3481ad;
+    color: #6e7797;
     font-size: 15px;
     font-weight: 500;
     line-height: 1.5;
@@ -403,6 +401,7 @@
 .tarife-price span {
     font-size: 13.5px;
     margin-top: 2px;
+    color: #7b85a2;
 }
 
 .tarife-note {
@@ -413,6 +412,80 @@
     line-height: 1.4;
     margin-top: 6px;
     margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+    .tarife-row {
+        display: flex;
+        align-items: center;
+    }
+
+    .tarife-col-img {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 25px;
+    }
+
+    .tarife-col-img .skill-left {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+
+    .tarife-col-img .skill-left img {
+        height: 500px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        border: 12px solid #fff;
+        box-shadow: 0px 16px 32px 0px rgba(167, 178, 219, 0.3);
+        display: block;
+    }
+
+    .tarife-col-text .progess-wrapper {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6px 0 6px 15px;
+        margin-bottom: 0;
+    }
+
+    .tarife-col-text .progess-wrapper .single-skill {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .tarife-col-img .skill-left {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .tarife-col-img .skill-left img {
+        max-height: 420px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        border: 10px solid #fff;
+        box-shadow: 0px 14px 28px 0px rgba(167, 178, 219, 0.25);
+        display: inline-block;
+    }
+
+    .tarife-col-text .progess-wrapper {
+        padding-top: 10px;
+    }
+
+    .tarife-col-text .progess-wrapper .single-skill {
+        margin-bottom: 26px;
+    }
+
+    .tarife-col-text .progess-wrapper .single-skill:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /* ========================================================
