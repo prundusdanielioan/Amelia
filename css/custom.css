@@ -111,7 +111,35 @@
 .section-header-about h2 {
     font-family: 'Dancing Script', cursive;
     font-weight: 600;
-    font-size: 7.5em;
+    font-size: 6rem;
+    line-height: 1.15;
+}
+
+@media (max-width: 1199px) {
+    .section-header-about {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .section-header-about h2 {
+        font-size: 4.2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    #about .pt-120 {
+        padding-top: 60px !important;
+    }
+    .section-header-about {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .section-header-about h2 {
+        font-size: 3rem;
+        line-height: 1.2;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 
 /* All section titles in #3481ad theme color */
@@ -675,6 +703,90 @@ body.modal-open {
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
+    }
+}
+
+/* ========================================================
+   HERO SLIDER: AFISARE SI STILIZARE IMAGINE PE MOBIL & TABLETA
+   ======================================================== */
+
+@media (max-width: 1199px) {
+    .single-slider {
+        min-height: auto !important;
+        padding-bottom: 50px;
+    }
+
+    .slider-content {
+        padding-top: 130px !important;
+        padding-bottom: 25px !important;
+        text-align: center;
+    }
+
+    .slider-content p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 540px;
+    }
+
+    .slider-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .slider-thumb {
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 30px auto 0 auto;
+        text-align: center;
+        width: 100% !important;
+        max-width: 400px;
+        display: block !important;
+    }
+
+    .slider-thumb img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 14px 36px rgba(52, 129, 173, 0.18);
+        display: inline-block;
+    }
+}
+
+@media (max-width: 767px) {
+    .slider-content {
+        padding-top: 85px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .slider-content h1.elementor-heading-title {
+        font-size: 16px;
+    }
+
+    .slider-content h2 {
+        font-size: 28px !important;
+        line-height: 1.25;
+    }
+
+    .slider-content p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .slider-thumb {
+        margin: 25px auto 10px auto;
+        max-width: 300px;
+    }
+
+    .slider-thumb img {
+        max-width: 260px;
+        border-radius: 16px;
+    }
+
+    .single-slider {
+        padding-bottom: 35px;
     }
 }
 
