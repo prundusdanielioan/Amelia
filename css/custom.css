@@ -62,6 +62,7 @@
     font-size: clamp(14px, 1.3vw, 16px);
     line-height: 1.5;
     margin-bottom: 25px;
+    font-style: italic;
 }
 
 @media (max-width: 991px) {
@@ -262,5 +263,97 @@
         padding-right: 40px;
     }
 }
+
+/* Studii și formare profesională */
+.education-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 38px 34px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    height: 100%;
+    border: 1px solid rgba(52, 129, 173, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(52, 129, 173, 0.1);
+}
+
+.education-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid rgba(52, 129, 173, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.education-card-title i {
+    color: #3481ad;
+    font-size: 20px;
+}
+
+.education-intro-text {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #475569;
+    margin-bottom: 22px;
+}
+
+.education-custom-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-custom-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 18px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.education-custom-list li:last-child {
+    margin-bottom: 0;
+}
+
+.education-custom-list li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    top: -2px;
+    color: #3481ad;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.education-custom-list li strong {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.education-inst {
+    display: block;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+    .education-card {
+        padding: 26px 20px;
+    }
+    .education-card-title {
+        font-size: 19px;
+    }
+}
+
 
 
