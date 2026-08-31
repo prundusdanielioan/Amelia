@@ -564,16 +564,21 @@
 }
 
 /* Tipografie detalii serviciu (Mobile & Desktop) */
+.service-detail-content,
+.service-modal-body {
+    color: #1e293b;
+}
+
 .service-detail-content p,
 .service-modal-body p {
     font-size: 15px;
     line-height: 1.65;
-    color: #334155;
+    color: #1e293b;
     margin-bottom: 16px;
 }
 
 .service-topics-header {
-    font-size: 15.5px;
+    font-size: 16px;
     font-weight: 700;
     color: #0f172a;
     margin-top: 20px;
@@ -592,7 +597,7 @@
     margin-bottom: 10px;
     font-size: 14.5px;
     line-height: 1.55;
-    color: #334155;
+    color: #1e293b;
 }
 
 .service-checklist li::before {
@@ -600,7 +605,7 @@
     position: absolute;
     left: 4px;
     top: 0;
-    color: #3481ad;
+    color: #1e293b;
     font-weight: 700;
     font-size: 15px;
 }
