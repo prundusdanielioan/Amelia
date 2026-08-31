@@ -387,6 +387,8 @@
 .progess-wrapper .bar-title h4 {
     color: #3481ad;
     font-weight: 500;
+    font-size: 20px !important;
+    line-height: 1.35;
     margin-bottom: 6px;
 }
 
@@ -780,25 +782,124 @@ body.modal-open {
 }
 
 /* ========================================================
-   HERO SLIDER: AFISARE SI STILIZARE IMAGINE PE MOBIL & TABLETA
+   HERO SLIDER: DESIGN 2 COLOANE PENTRU TOATE ECRANELE
+   (LAPTOP MACBOOK AIR, DESKTOP, TABLETA, MOBIL)
    ======================================================== */
 
-@media (max-width: 1199px) {
+.quote-top-wrapper {
+    background-color: #f8fafc;
+    border-bottom: 1px solid #eef2f6;
+    position: relative;
+    z-index: 2;
+}
+
+.quote-top-wrapper p {
+    color: #3481ad !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    margin-bottom: 0 !important;
+    padding: 14px 15px !important;
+}
+
+.single-slider {
+    min-height: auto !important;
+    padding-top: 60px !important;
+    padding-bottom: 70px !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-content {
+    padding: 20px 0;
+    text-align: left;
+}
+
+.slider-content h2 {
+    font-size: 46px !important;
+    line-height: 1.18 !important;
+    color: #000a2d !important;
+    margin-bottom: 20px !important;
+    font-weight: 700 !important;
+}
+
+.slider-content p {
+    font-size: 18px !important;
+    line-height: 1.65 !important;
+    color: #556080 !important;
+    margin-bottom: 32px !important;
+    max-width: 580px;
+}
+
+.slider-thumb {
+    position: static !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 420px !important;
+    margin: 0 auto !important;
+    text-align: center;
+    display: block !important;
+}
+
+.slider-thumb img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(52, 129, 173, 0.18);
+    display: inline-block;
+}
+
+/* Laptopuri (inclusiv MacBook Air 1200px - 1440px) */
+@media (min-width: 992px) and (max-width: 1440px) {
     .single-slider {
-        min-height: auto !important;
-        padding-bottom: 50px;
+        padding-top: 50px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .slider-content h2 {
+        font-size: 38px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 18px !important;
+    }
+
+    .slider-content p {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 26px !important;
+        max-width: 520px;
+    }
+
+    .slider-thumb img {
+        max-width: 320px;
+        border-radius: 20px;
+    }
+}
+
+/* Tablete și ecrane medii (768px - 991px) */
+@media (max-width: 991px) {
+    .single-slider {
+        padding-top: 40px !important;
+        padding-bottom: 50px !important;
     }
 
     .slider-content {
-        padding-top: 130px !important;
-        padding-bottom: 25px !important;
         text-align: center;
+        padding-top: 20px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .slider-content h2 {
+        font-size: 34px !important;
     }
 
     .slider-content p {
         margin-left: auto;
         margin-right: auto;
-        max-width: 540px;
+        max-width: 500px;
     }
 
     .slider-btn {
@@ -807,59 +908,50 @@ body.modal-open {
     }
 
     .slider-thumb {
-        position: relative !important;
-        right: auto !important;
-        bottom: auto !important;
-        margin: 30px auto 0 auto;
-        text-align: center;
-        width: 100% !important;
-        max-width: 400px;
-        display: block !important;
+        margin-top: 15px !important;
     }
 
     .slider-thumb img {
-        width: 100%;
-        max-width: 320px;
-        height: auto;
-        border-radius: 20px;
-        box-shadow: 0 14px 36px rgba(52, 129, 173, 0.18);
-        display: inline-block;
+        max-width: 300px;
     }
 }
 
+/* Telefoane (< 768px) */
 @media (max-width: 767px) {
-    .slider-content {
-        padding-top: 85px !important;
-        padding-bottom: 15px !important;
-    }
-
-    .slider-content h1.elementor-heading-title {
-        font-size: 16px;
-    }
-
-    .slider-content h2 {
-        font-size: 28px !important;
-        line-height: 1.25;
-    }
-
-    .slider-content p {
-        font-size: 15px;
-        line-height: 1.6;
-        margin-bottom: 25px;
-    }
-
-    .slider-thumb {
-        margin: 25px auto 10px auto;
-        max-width: 300px;
-    }
-
-    .slider-thumb img {
-        max-width: 260px;
-        border-radius: 16px;
+    .quote-top-wrapper p {
+        font-size: 14px !important;
+        padding: 10px 15px !important;
     }
 
     .single-slider {
-        padding-bottom: 35px;
+        padding-top: 25px !important;
+        padding-bottom: 35px !important;
+    }
+
+    .slider-content {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .slider-content h2 {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .slider-content p {
+        font-size: 14.5px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 24px !important;
+    }
+
+    .slider-thumb {
+        margin: 15px auto 10px auto !important;
+    }
+
+    .slider-thumb img {
+        max-width: 250px;
+        border-radius: 16px;
     }
 }
 
