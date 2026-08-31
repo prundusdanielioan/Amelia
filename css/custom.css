@@ -275,6 +275,78 @@
     width: 0 !important;
 }
 
+/* ========================================================
+   MOBILE HEADER: SOCIAL ICONS AFARA DIN MENIUL HAMBURGER
+   ======================================================== */
+
+/* Ascunde elementele social din interiorul dropdown-ului hamburger */
+.mean-container .mean-nav ul li.social-nav-item,
+.mean-nav .social-nav-item {
+    display: none !important;
+}
+
+/* Coloana si iconitele social afisate in bara de antet pe mobil/tableta */
+.mobile-header-social-col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mobile-header-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: 50px; /* spatiu pentru butonul hamburger aflat la right: 0 */
+}
+
+.mobile-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: #3481ad !important;
+    font-size: 18px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.mobile-social-link:hover,
+.mobile-social-link:active {
+    color: #205c80 !important;
+    transform: scale(1.15);
+}
+
+@media (max-width: 575px) {
+    .mobile-header-social {
+        gap: 12px;
+        margin-right: 42px;
+    }
+    .mobile-social-link {
+        font-size: 16px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Eliminare linia orizontala defectuoasa din meniul mobil si evidentiere curata a sectiunii active */
+.mean-container .mean-nav ul li a::before,
+.mean-container .mean-nav ul li a::after,
+.mean-container .mean-nav ul li a.active::before,
+.mean-container .mean-nav ul li a.active::after {
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.mean-container .mean-nav ul li a.active {
+    color: #3481ad !important;
+    background-color: rgba(52, 129, 173, 0.15) !important;
+    border-left: 4px solid #3481ad !important;
+    padding-left: calc(5% - 4px) !important;
+    font-weight: 700 !important;
+}
+
 /* Container breathing room and horizontal spacing */
 .container {
     max-width: 1200px;
