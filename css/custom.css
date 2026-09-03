@@ -1,3 +1,52 @@
+/* ========================================================
+   SISTEM TIPOGRAFIC GLOBAL (MAXIMUM DOUĂ FONTURI)
+   1. Titluri / Headings: 'Playfair Display' (serif elegant)
+   2. Text / Body: 'Inter' (sans-serif modern, ultra-lizibil)
+   Fontul caligrafic ramane exclusiv in logo-ul cabinetului.
+   ======================================================== */
+
+body,
+p,
+span,
+li,
+a,
+button,
+input,
+textarea,
+select,
+label,
+.tarife-price,
+.tarife-note,
+.service-detail-content,
+.service-modal-body,
+.article-content,
+.slider-content p,
+.about-right p,
+.footer-area {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-header h2,
+.section-header-about h2,
+.slider-content h2,
+.newsfeed-content h3,
+.progess-wrapper .bar-title h4,
+.education-card-title,
+.article-single-title,
+.article-content h3,
+.article-content h4,
+.article-references-box h5,
+.service-topics-header,
+.services-content h4 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+}
+
 /* Responsive Logo styling */
 .logo {
     display: inline-block;
@@ -107,45 +156,84 @@
     text-indent: 1.5em;
 }
 
-/* Handwritten font for "Cine sunt eu?" title */
+/* ========================================================
+   TITLURI MARI DE SECȚIUNI (SERVICII, TARIFE, DESPRE MINE ETC.)
+   - Desktop: 48px (aerisit, letter-spacing 0.5px)
+   - Tableta: 40px
+   - Telefon: 34px
+   - Spațiu alb generos deasupra și dedesubtul titlurilor
+   ======================================================== */
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-header h2,
 .section-header-about h2 {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    font-size: 6rem;
-    line-height: 1.15;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 48px !important;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    color: #3481ad !important;
+    margin-bottom: 0;
+}
+
+.section-header-about h2 {
+    font-size: 48px !important;
+}
+
+/* Spațiu alb generos deasupra și dedesubtul secțiunii Servicii */
+.services-area {
+    padding-top: 130px !important;
+    padding-bottom: 100px !important;
 }
 
 @media (max-width: 1199px) {
+    .section-header {
+        margin-bottom: 50px;
+    }
+    .section-header h2,
+    .section-header-about h2 {
+        font-size: 40px !important;
+    }
     .section-header-about {
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
     .section-header-about h2 {
-        font-size: 4.2rem;
         text-align: center;
+    }
+    .services-area {
+        padding-top: 100px !important;
+        padding-bottom: 80px !important;
     }
 }
 
 @media (max-width: 767px) {
+    .section-header {
+        margin-bottom: 38px;
+    }
+    .section-header h2,
+    .section-header-about h2 {
+        font-size: 34px !important;
+        line-height: 1.25;
+    }
     #about .pt-120 {
         padding-top: 60px !important;
     }
     .section-header-about {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
     .section-header-about h2 {
-        font-size: 3rem;
-        line-height: 1.2;
         text-align: center;
         margin-bottom: 10px;
     }
-}
-
-/* All section titles in #3481ad theme color */
-.section-header h2,
-.section-header-about h2 {
-    color: #3481ad !important;
+    .services-area {
+        padding-top: 80px !important;
+        padding-bottom: 60px !important;
+    }
 }
 
 /* Navigation menu active/hover underline indicator color */
@@ -205,34 +293,100 @@
 }
 
 
-/* Service cards styling */
+/* ========================================================
+   CARDURILE SERVICIILOR (STRUCTURĂ IDENTICĂ & HOVER FIN)
+   - Dimensiuni și spațiere interioară identice
+   - Colțuri discret rotunjite (12px), contur fin (1px) și umbră ușoară
+   - Iconițe identice ca stil și dimensiune (58px / font 22px)
+   - La hover: ridicare foarte ușoară (-3px) și contur albastru discret
+   ======================================================== */
+
 .services-body {
-    background: #fff;
-    padding: 40px 30px;
-    border: 2px solid #eef2f6;
-    border-radius: 16px;
-    transition: all 0.3s ease;
+    background: #ffffff;
+    padding: 38px 26px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
     text-align: center;
     height: 100%;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .services-body:hover {
     border-color: #3481ad;
-    box-shadow: 0 10px 30px rgba(52, 129, 173, 0.12);
-    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(52, 129, 173, 0.1);
+    transform: translateY(-3px);
 }
 
 .service-card-icon {
-    width: 70px;
-    height: 70px;
-    background: rgba(52, 129, 173, 0.1);
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    min-height: 58px;
+    background: rgba(52, 129, 173, 0.08);
     color: #3481ad;
     border-radius: 50%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 20px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.services-body:hover .service-card-icon {
+    background: rgba(52, 129, 173, 0.14);
+    color: #205c80;
+}
+
+.services-content {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-content h4 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 19px !important;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #1e293b;
+    margin: 0;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .services-body {
+        padding: 28px 20px;
+        min-height: auto;
+    }
+    .services-content h4 {
+        min-height: auto;
+        font-size: 18px !important;
+    }
+    .service-card-icon {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        min-height: 52px;
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
 }
 
 /* Calendly widget styling */
@@ -465,7 +619,6 @@
 }
 
 .tarife-price {
-    font-family: 'Rubik', sans-serif;
     color: #6e7797;
     font-size: 15px;
     font-weight: 500;
@@ -479,7 +632,6 @@
 }
 
 .tarife-note {
-    font-family: 'Rubik', sans-serif;
     font-size: 12.5px;
     font-style: italic;
     color: #7b85a2;
@@ -565,19 +717,6 @@
 /* ========================================================
    SECTIUNEA SERVICII: DIALOG MODAL (PC) & ACORDEON (MOBIL)
    ======================================================== */
-
-.services-body {
-    cursor: pointer;
-    position: relative;
-    user-select: none;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.services-body:hover {
-    border-color: #3481ad;
-    box-shadow: 0 14px 32px rgba(52, 129, 173, 0.16);
-    transform: translateY(-4px);
-}
 
 /* Acordeon / Drawer pentru mobil (< 768px) */
 .service-mobile-drawer {
